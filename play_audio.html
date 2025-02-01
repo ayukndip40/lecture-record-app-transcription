@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Audio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1877f2;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .back-btn:hover {
+            background-color: #165dbf;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Play Audio</h1>
+        <audio controls>
+            <source src="{{ audio_path }}" type="{{ mime_type }}">
+            Your browser does not support the audio element.
+        </audio>
+        <a href="/dashboard" class="back-btn">Back to Dashboard</a>
+    </div>
+</body>
+</html>
